@@ -1,0 +1,14 @@
+{{> lineUpNav}}
+
+<h2>add location: <span class="data">{{location.name}}</span></h2>
+<form action="/locations/add" method="post"  class="form">
+  <input type="hidden" name="id" value="{{location.id}}">
+<label for="name" class="label">Location </label>
+  <input type="text" id="name" name="name" placeholder="location" value="{{location.name}}">
+
+  <label for="description" class="label"> Description </label>
+  <textarea rows="5" id="description" name="description"
+    placeholder="Event description">{{location.description}}</textarea>
+   <button>Add Location</button>
+
+</form>

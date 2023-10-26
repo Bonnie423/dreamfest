@@ -24,8 +24,8 @@ Let's get stuck in!
 
 ### 0. Installation and migrations
 
-- [ ] Clone this repo and `cd` into the new directory
-- [ ] Install packages, run migrations and seeds, and start the dev server with `npm run dev`
+- [X ] Clone this repo and `cd` into the new directory
+- [X ] Install packages, run migrations and seeds, and start the dev server with `npm run dev`
   <details style="padding-left: 2em">
     <summary>Tip</summary>
 
@@ -55,7 +55,7 @@ The application is usable... _ish_. You can try anything and the app shouldn't b
 
 - [x] Have a look at the `GET /locations` route in `routes/locations.ts`
 - [x] Complete the `getAllLocations` function in `db/index.ts` and have it return a Promise that resolves to an array of locations from the database
-- [ ] Complete the route using your new database function
+- [ X] Complete the route using your new database function
 <details style="padding-left: 2em">
   <summary>Tip</summary>
   
@@ -64,8 +64,8 @@ The application is usable... _ish_. You can try anything and the app shouldn't b
 
 ### 2. Show events for a day
 
-- [ ] Have a look at the `GET /schedule/:day` route in `routes/schedule.js`
-- [ ] Build a `getEventsByDay` function with a `day` parameter. Today we'll put all our database functions in `db/index.ts`
+- [X ] Have a look at the `GET /schedule/:day` route in `routes/schedule.js`
+- [X ] Build a `getEventsByDay` function with a `day` parameter. Today we'll put all our database functions in `db/index.ts`
   <details style="padding-left: 2em">
     <summary>More about the <code>getEventsByDay</code> function</summary>
 
