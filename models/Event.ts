@@ -15,6 +15,14 @@ export interface EventWithLocation {
   description: string
 }
 
-export interface Event extends EventData {
+export interface Event extends EventForm {
   id: number
+}
+
+export interface EventForm{
+  location_id: number
+  day: string
+  time: string
+  name: string
+  description: string
 }

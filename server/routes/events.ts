@@ -40,7 +40,6 @@ router.post('/delete', async (req, res, next) => {
   try {
     const id = Number(req.body.id)
     const day = validateDay(req.body.day)
-  
 
     await db.deletEvent(id)
 
@@ -82,7 +81,7 @@ router.post('/edit', async (req, res) => {
   const day = validateDay(req.body.day)
   const location_id = Number(req.body.locationId)
 
-  const updatedEvent = { id, name, description, time, location_id }
+  const updatedEvent = { id, name, description,day, time, location_id }
 
   await db.updateEvent(updatedEvent)
 
