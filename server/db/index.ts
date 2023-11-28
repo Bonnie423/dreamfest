@@ -43,7 +43,7 @@ export async function updateLocation(
   return connection('locations')
     .where('id', updatedLocation.id)
     .update(updatedLocation)
-    .returning('*')
+    .returning(['id', 'name', 'description'])
 }
 
 export async function addNewEvent(newEvent: EventForm): Promise<EventData[]> {
@@ -73,7 +73,9 @@ export async function updateEvent(updatedEvent: Event): Promise<Event> {
   return connection('events').where('id', updatedEvent.id).update(updatedEvent)
 }
 
-export async function getAddLocation(newLocation: LocationData): Promise<Location> {
+export async function getAddLocation(
+  newLocation: LocationData
+): Promise<Location> {
   return connection('locations').insert(newLocation)
 }
 
@@ -83,5 +85,3 @@ export async function deleteLocation(id: number): Promise<Location> {
 
     .del()
 }
-
-

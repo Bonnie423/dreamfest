@@ -19,7 +19,7 @@ export interface Event extends EventForm {
   id: number
 }
 
-export interface EventForm{
+export interface EventForm {
   location_id: number
   day: string
   time: string

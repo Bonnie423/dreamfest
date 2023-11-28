@@ -28,7 +28,7 @@ router.post('/add', async (req, res, next) => {
     const day = validateDay(req.body.day)
     const location_id = Number(locationId)
     const newEvent = { name, description, time, location_id, day }
-    const result = await db.addNewEvent(newEvent)
+    await db.addNewEvent(newEvent)
     res.redirect(`/schedule/${day}`)
   } catch (err) {
     next(err)
@@ -81,7 +81,7 @@ router.post('/edit', async (req, res) => {
   const day = validateDay(req.body.day)
   const location_id = Number(req.body.locationId)
 
-  const updatedEvent = { id, name, description,day, time, location_id }
+  const updatedEvent = { id, name, description, day, time, location_id }
 
   await db.updateEvent(updatedEvent)
 

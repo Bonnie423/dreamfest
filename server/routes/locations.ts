@@ -23,7 +23,7 @@ router.get('/:id/edit', async (req, res, next) => {
     const id = Number(req.params.id)
 
     const viewData = await db.getLocationById(id)
-    console.log(viewData)
+
     res.render('editLocation', viewData)
   } catch (e) {
     next(e)
@@ -67,9 +67,9 @@ router.post('/add', async (req, res, next) => {
 router.post('/delete', async (req, res, next) => {
   try {
     const id = Number(req.body.id)
-    console.log(id)
-    const result = await db.deleteLocation(id)
-    console.log(result)
+
+    await db.deleteLocation(id)
+
     res.redirect('/locations')
   } catch (e) {
     next(e)
